@@ -77,36 +77,32 @@ class _GamePlayPageState extends State<GamePlayPage> {
               // Score
               Padding(
                 padding: const EdgeInsets.all(VariableConst.margin),
-                child: Column(
+                child: Row(
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 3,
-                          child: PlayerWidget(
-                            url: (isDark)
-                                ? ImageConst.profilePlayer1Light
-                                : ImageConst.profilePlayer1Dark,
-                            isPlayer1: true,
-                            isDark: isDark,
-                          ),
-                        ),
-                        const SizedBox(width: 24),
-                        Expanded(
-                          child: Image.asset(
-                            ImageConst.versus,
-                          ),
-                        ),
-                        const SizedBox(width: 24),
-                        Expanded(
-                          flex: 3,
-                          child: PlayerWidget(
-                            url: ImageConst.profilePlayer2Red,
-                            isPlayer1: false,
-                            isDark: isDark,
-                          ),
-                        ),
-                      ],
+                    Expanded(
+                      flex: 3,
+                      child: PlayerWidget(
+                        url: (isDark)
+                            ? ImageConst.profilePlayer1Light
+                            : ImageConst.profilePlayer1Dark,
+                        isPlayer1: true,
+                        isDark: isDark,
+                      ),
+                    ),
+                    const SizedBox(width: 24),
+                    Expanded(
+                      child: Image.asset(
+                        ImageConst.versus,
+                      ),
+                    ),
+                    const SizedBox(width: 24),
+                    Expanded(
+                      flex: 3,
+                      child: PlayerWidget(
+                        url: ImageConst.profilePlayer2Red,
+                        isPlayer1: false,
+                        isDark: isDark,
+                      ),
                     ),
                   ],
                 ),

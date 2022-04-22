@@ -51,13 +51,13 @@ class DialogWinnerWidget extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 if (forRound) {
+                  Navigator.pop(context);
+
                   // Update Board State
                   BoardCubitHandle.read(context).clear(board.round + 1);
                   // Update Player State
                   PlayerCubitHandle.read(context).updatePlayer1Turn(true);
                   PlayerCubitHandle.read(context).updatePlayer2Turn(false);
-
-                  Navigator.pop(context);
 
                   return;
                 }
